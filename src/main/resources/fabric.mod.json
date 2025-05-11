@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "shiphandler",
+	"version": "${version}",
+	"name": "ShipHandler",
+	"description": "Allows you to automatically delete ships that haven't been registered, to reduce lag",
+	"authors": [
+		"llyycci"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "logo.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "com.llyycci.shiphandler.ShipHandlerMod"
+		],
+		"client": [
+			"com.llyycci.shiphandler.ShipHandlerClient"
+		],
+		"fabric-datagen": [
+			"com.llyycci.shiphandler.ShipHandlerDataGenerator"
+		]
+	},
+	"mixins": [
+		"shiphandler.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
